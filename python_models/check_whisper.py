@@ -1,7 +1,5 @@
 import whisper
 
-try:
-    model = whisper.load_model("base")
-    print("Model loaded successfully.")
-except Exception as e:
-    print(f"Error loading model: {e}")
+model = whisper.load_model("base")
+result = model.transcribe(r'C:\Users\Personal\Documents\projects\AIMate\AIMate app other stuff\test_audio.mp3')
+print(result["text"])
