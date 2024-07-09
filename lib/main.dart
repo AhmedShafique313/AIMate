@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:aimate/pages/splash_screen.dart';
 
 void main() {
   runApp(const Myapp());
@@ -9,6 +10,11 @@ class Myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {"/": (context) => const SplashScreen()},
+      title: 'AIMate',
+      theme: ThemeData(brightness: Brightness.dark),
+    );
   }
 }
