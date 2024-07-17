@@ -10,8 +10,10 @@ class GetStartedScreen extends StatefulWidget {
 class _GetStartedScreenState extends State<GetStartedScreen> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.white,
+    return const SafeArea(
+      child: Scaffold(
+        backgroundColor: Colors.black,
+      ),
     );
   }
 }
