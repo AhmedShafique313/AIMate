@@ -1,3 +1,5 @@
+import 'package:aimate/pages/sign_in.dart';
+import 'package:aimate/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class GetStartedScreen extends StatefulWidget {
@@ -113,10 +115,62 @@ class _GetStartedScreenState extends State<GetStartedScreen> {
               height: 500,
               width: 300,
             ),
-            const SizedBox(height: 20),
-            const Row(
+            const SizedBox(height: 45),
+            Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [Text('Buttons for login and signup are placed here')],
+              children: [
+                ElevatedButton(
+                    style: ButtonStyle(
+                        padding:
+                            const MaterialStatePropertyAll(EdgeInsets.all(20)),
+                        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                            side: const BorderSide(
+                                width: 3, color: Color(0xffC366BA)),
+                            borderRadius: BorderRadius.circular(30))),
+                        backgroundColor:
+                            const MaterialStatePropertyAll(Color(0xffFFFFFF))),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignupPage()));
+                    },
+                    child: const Text(
+                      'Sign up',
+                      style: TextStyle(
+                          fontFamily: 'Halant',
+                          fontSize: 24,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black),
+                    )),
+                const SizedBox(
+                  width: 50,
+                ),
+                ElevatedButton(
+                    style: ButtonStyle(
+                        padding:
+                            const MaterialStatePropertyAll(EdgeInsets.all(20)),
+                        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                            side: const BorderSide(
+                                width: 3, color: Color(0xff2A8FBA)),
+                            borderRadius: BorderRadius.circular(30))),
+                        backgroundColor:
+                            const MaterialStatePropertyAll(Color(0xff191F24))),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SigninPage()));
+                    },
+                    child: const Text(
+                      'Sign in',
+                      style: TextStyle(
+                          fontFamily: 'Halant',
+                          fontSize: 24,
+                          color: Colors.white,
+                          fontWeight: FontWeight.w300),
+                    ))
+              ],
             ),
           ],
         ),
