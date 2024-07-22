@@ -10,13 +10,14 @@ class SignupPage extends StatefulWidget {
 class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    // ignore: prefer_const_constructors
+    return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 8,
@@ -53,7 +54,7 @@ class _SignupPageState extends State<SignupPage> {
                 )
               ],
             ),
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 8,
@@ -70,7 +71,7 @@ class _SignupPageState extends State<SignupPage> {
                 ),
               ],
             ),
-            Row(
+            const Row(
               children: [
                 SizedBox(
                   width: 8,
@@ -86,6 +87,77 @@ class _SignupPageState extends State<SignupPage> {
                           fontFamily: 'Halant'),
                     )),
               ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    fillColor: const Color.fromARGB(209, 25, 31, 36),
+                    hintText: 'Full Name',
+                    hintStyle: const TextStyle()),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    fillColor: const Color.fromARGB(209, 25, 31, 36),
+                    hintText: 'Email',
+                    hintStyle: const TextStyle()),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    fillColor: const Color.fromARGB(209, 25, 31, 36),
+                    hintText: 'Password',
+                    hintStyle: const TextStyle()),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 5),
+              child: TextField(
+                decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30),
+                        borderSide: const BorderSide(
+                            width: 2, color: Color(0xff2A8FBA))),
+                    fillColor: const Color.fromARGB(209, 25, 31, 36),
+                    hintText: 'Confirm Password',
+                    hintStyle: const TextStyle()),
+              ),
             )
           ],
         ),
