@@ -85,8 +85,9 @@ flutter:
     - family: Halant
       fonts:
         - asset: fonts/Halant-Medium.ttf
-        # - asset: fonts/TrajanPro_Bold.ttf
-        #   weight: 700
+    - family: GentiumPlus
+      fonts:
+        - asset: fonts/GentiumPlus-Bold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
