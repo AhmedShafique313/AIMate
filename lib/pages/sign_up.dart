@@ -1,4 +1,5 @@
 import 'package:aimate/pages/dashboard.dart';
+import 'package:aimate/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
@@ -159,6 +160,42 @@ class _SignupPageState extends State<SignupPage> {
                     hintText: 'Confirm Password',
                     hintStyle: const TextStyle()),
               ),
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 20,
+                ),
+                const Opacity(
+                  opacity: 0.5,
+                  child: Text(
+                    'Already have an account?',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Halant'),
+                  ),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SigninPage()));
+                  },
+                  child: const Text(
+                    'Login',
+                    style: TextStyle(
+                        color: Color(0xffC366BA),
+                        fontSize: 22,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Halant'),
+                  ),
+                )
+              ],
             ),
             const SizedBox(height: 20),
             Row(
