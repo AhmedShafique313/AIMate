@@ -1,4 +1,5 @@
 import 'package:aimate/pages/dashboard.dart';
+import 'package:aimate/pages/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatefulWidget {
@@ -74,11 +75,11 @@ class _SigninPageState extends State<SigninPage> {
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: const BorderSide(
-                            width: 2, color: Color(0xff2A8FBA))),
+                            width: 2, color: Color(0xffC366BA))),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: const BorderSide(
-                            width: 2, color: Color(0xff2A8FBA))),
+                            width: 2, color: Color(0xffC366BA))),
                     fillColor: const Color.fromARGB(209, 25, 31, 36),
                     hintText: 'Email address',
                     hintStyle: const TextStyle()),
@@ -91,15 +92,51 @@ class _SigninPageState extends State<SigninPage> {
                     focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: const BorderSide(
-                            width: 2, color: Color(0xff2A8FBA))),
+                            width: 2, color: Color(0xffC366BA))),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30),
                         borderSide: const BorderSide(
-                            width: 2, color: Color(0xff2A8FBA))),
+                            width: 2, color: Color(0xffC366BA))),
                     fillColor: const Color.fromARGB(209, 25, 31, 36),
                     hintText: 'Password',
                     hintStyle: const TextStyle()),
               ),
+            ),
+            Row(
+              children: [
+                const SizedBox(
+                  width: 20,
+                ),
+                const Opacity(
+                  opacity: 0.5,
+                  child: Text(
+                    'New to AIMate?',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Halant'),
+                  ),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const SignupPage()));
+                  },
+                  child: const Text(
+                    'Register',
+                    style: TextStyle(
+                        color: Color(0xff2A8FBA),
+                        fontSize: 22,
+                        fontWeight: FontWeight.w300,
+                        fontFamily: 'Halant'),
+                  ),
+                )
+              ],
             ),
             const SizedBox(height: 20),
             Row(
@@ -111,10 +148,10 @@ class _SigninPageState extends State<SigninPage> {
                             const MaterialStatePropertyAll(EdgeInsets.all(20)),
                         shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                             side: const BorderSide(
-                                width: 3, color: Color(0xff2A8FBA)),
+                                width: 3, color: Color(0xffC366BA)),
                             borderRadius: BorderRadius.circular(30))),
                         backgroundColor:
-                            const MaterialStatePropertyAll(Color(0xff2A8FBA))),
+                            const MaterialStatePropertyAll(Color(0xffC366BA))),
                     onPressed: () {
                       Navigator.push(
                           context,
