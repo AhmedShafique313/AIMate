@@ -158,7 +158,32 @@ class _SignupPageState extends State<SignupPage> {
                     hintText: 'Confirm Password',
                     hintStyle: const TextStyle()),
               ),
-            )
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                    style: ButtonStyle(
+                        padding:
+                            const MaterialStatePropertyAll(EdgeInsets.all(20)),
+                        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
+                            side: const BorderSide(
+                                width: 3, color: Color(0xff2A8FBA)),
+                            borderRadius: BorderRadius.circular(30))),
+                        backgroundColor:
+                            const MaterialStatePropertyAll(Color(0xff2A8FBA))),
+                    onPressed: () {},
+                    child: const Text(
+                      'Sign up',
+                      style: TextStyle(
+                          fontFamily: 'Halant',
+                          fontSize: 24,
+                          fontWeight: FontWeight.w300,
+                          color: Colors.black),
+                    )),
+              ],
+            ),
           ],
         ),
       ),
