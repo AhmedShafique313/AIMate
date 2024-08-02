@@ -1,3 +1,4 @@
+import 'package:aimate/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
@@ -88,7 +89,7 @@ class _SignupPageState extends State<SignupPage> {
                     )),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Padding(
@@ -159,7 +160,7 @@ class _SignupPageState extends State<SignupPage> {
                     hintStyle: const TextStyle()),
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -173,7 +174,12 @@ class _SignupPageState extends State<SignupPage> {
                             borderRadius: BorderRadius.circular(30))),
                         backgroundColor:
                             const MaterialStatePropertyAll(Color(0xff2A8FBA))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DashboardScreen()));
+                    },
                     child: const Text(
                       'Sign up',
                       style: TextStyle(

@@ -1,3 +1,4 @@
+import 'package:aimate/pages/dashboard.dart';
 import 'package:flutter/material.dart';
 
 class SigninPage extends StatefulWidget {
@@ -114,7 +115,12 @@ class _SigninPageState extends State<SigninPage> {
                             borderRadius: BorderRadius.circular(30))),
                         backgroundColor:
                             const MaterialStatePropertyAll(Color(0xff2A8FBA))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DashboardScreen()));
+                    },
                     child: const Text(
                       'Sign in',
                       style: TextStyle(
